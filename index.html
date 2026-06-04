@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Multimedia Interactivo</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="app">
+        <div class="player">
+            <div id="canvasContainer" class="canvas-area"></div>
+
+            <div class="controls">
+                <button id="btnRewind" class="ctrl-btn" title="Retroceder 5s">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M11.99 5V1l-5 5 5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6h-2c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+                    </svg>
+                </button>
+
+                <button id="btnPlay" class="ctrl-btn play-btn" title="Play / Pausa">
+                    <svg class="play-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                        <polygon points="6,4 20,12 6,20"/>
+                    </svg>
+                </button>
+
+                <button id="btnForward" class="ctrl-btn" title="Adelantar 5s">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M12 5V1l5 5-5 5V7c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6h2c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8z"/>
+                    </svg>
+                </button>
+
+                <div class="seek-wrapper">
+                    <span id="timeElapsed" class="time">0:00</span>
+                    <div id="seekBar" class="bar-track">
+                        <div id="seekProgress" class="bar-fill"></div>
+                        <div id="seekThumb" class="bar-thumb"></div>
+                    </div>
+                    <span id="timeDuration" class="time">0:00</span>
+                </div>
+
+                <div class="volume-area">
+                    <span class="vol-icon">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                        </svg>
+                    </span>
+                    <div id="volumeBar" class="bar-track volume-bar">
+                        <div id="volumeFill" class="bar-fill volume-fill"></div>
+                        <div id="volumeThumb" class="bar-thumb volume-thumb"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+    <script src="js/sketch.js"></script>
+</body>
+</html>
